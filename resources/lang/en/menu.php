@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'add_menu' => 'Add Menu',
+    'parent' => 'Parent (optional)',
+    'select_parent' => '-- Select Parent Menu --',
+    'menu_type' => 'Select Menu Type',
+    'select_menu_type' => '-- Select Menu Type --',
+    'pages' => 'Pages',
+    'posts' => 'Posts',
+    'categories' => 'Categories',
+    'link_label' => 'Link Label',
+    'link_url' => 'Link URL (optional)',
+    'search' => 'Search',
+    'add_button' => 'Add Menu',
+    'menu_structure' => 'Menu Structure',
+    'dashboard' => 'Dashboard',
+      'search_pages' => 'Search Pages',
+    'search_posts' => 'Search Posts',
+    'search_categories' => 'Search Categories',
+     'created_success' => 'Menu item created successfully.',
+    'created_failed' => 'Failed to create menu item',
+    'updated_success' => 'Menu item updated successfully.',
+    'deleted_success' => 'Menu item deleted successfully.',
+    'order_updated' => 'Menu order updated successfully.',
+    'success' => 'Success',
+];

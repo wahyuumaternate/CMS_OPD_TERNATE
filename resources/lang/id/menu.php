@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'add_menu' => 'Tambah Menu',
+    'parent' => 'Induk (opsional)',
+    'select_parent' => '-- Pilih Menu Induk --',
+    'menu_type' => 'Pilih Jenis Menu',
+    'select_menu_type' => '-- Pilih Jenis Menu --',
+    'pages' => 'Halaman',
+    'posts' => 'Postingan',
+    'categories' => 'Kategori',
+    'link_label' => 'Label Tautan',
+    'link_url' => 'URL Tautan (opsional)',
+    'search' => 'Cari',
+    'add_button' => 'Tambah Menu',
+     'menu_structure' => 'Struktur Menu',
+    'dashboard' => 'Dasbor',
+     'search_pages' => 'Cari Halaman',
+    'search_posts' => 'Cari Postingan',
+    'search_categories' => 'Cari Kategori',
+     'created_success' => 'Menu berhasil dibuat.',
+    'created_failed' => 'Gagal membuat menu',
+    'updated_success' => 'Menu berhasil diperbarui.',
+    'deleted_success' => 'Menu berhasil dihapus.',
+    'order_updated' => 'Urutan menu berhasil diperbarui.',
+    'success' => 'Berhasil',
+];

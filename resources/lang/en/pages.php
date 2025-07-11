@@ -1,0 +1,22 @@
+<?php
+return [
+    'title' => 'Pages',
+    'all_pages' => 'All Pages',
+    'add' => 'Add Page',
+    'title_column' => 'Title',
+    'slug' => 'Slug',
+    'status' => 'Status',
+    'created_at' => 'Created At',
+    'action' => 'Action',
+    'active' => 'Active',
+    'inactive' => 'Inactive',
+    'create'        => 'Create Page',
+    'edit'          => 'Edit Page',
+    'content'       => 'Content',
+    'save'          => 'Save',
+     'created_success' => 'Page created successfully.',
+    'created_failed' => 'Failed to create page',
+    'updated_success' => 'Page updated successfully.',
+    'updated_failed' => 'Failed to update page',
+    'deleted_success' => 'Page deleted successfully.',
+];

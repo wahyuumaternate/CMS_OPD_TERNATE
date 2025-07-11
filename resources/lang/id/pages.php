@@ -1,0 +1,22 @@
+<?php
+return [
+    'title' => 'Halaman',
+    'all_pages' => 'Semua Halaman',
+    'add' => 'Tambah Halaman',
+    'title_column' => 'Judul',
+    'slug' => 'Slug',
+    'status' => 'Status',
+    'created_at' => 'Tanggal Dibuat',
+    'action' => 'Aksi',
+    'active' => 'Aktif',
+    'inactive' => 'Tidak Aktif',
+    'create' => 'Tambah Halaman',
+    'edit' => 'Edit Halaman',
+    'content' => 'Konten',
+    'save' => 'Simpan',
+     'created_success' => 'Halaman berhasil dibuat.',
+    'created_failed' => 'Gagal membuat halaman',
+    'updated_success' => 'Halaman berhasil diperbaharui.',
+    'updated_failed' => 'Gagal memperbarui halaman',
+    'deleted_success' => 'Halaman berhasil dihapus.',
+];
