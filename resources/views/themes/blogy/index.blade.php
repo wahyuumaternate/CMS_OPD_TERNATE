@@ -24,7 +24,7 @@
                 @endforeach
 
                 @foreach ($banner->skip(1)->take(1) as $p)
-                    <article class="blog-item" data-aos="fade-up" data-aos-delay="{{ ($p->id + 1) * 100 }}">
+                    <article class="blog-item" data-aos="fade-up" data-aos-delay="{{ ($p->id + 1) * 50 }}">
                         <img src="{{ $p->image }}" alt="{{ $p->title }}" class="img-fluid" />
                         <div class="blog-content">
                             <div class="post-meta">
@@ -106,7 +106,7 @@
                                 <img src="{{ $post->image }}" alt="{{ $post->title }}" class="img-fluid" />
                             </div>
 
-                            <p class="post-category">{{ $post->category->name  }}
+                            <p class="post-category">{{ $post->category->name }}
                             </p>
 
                             <h2 class="title">
