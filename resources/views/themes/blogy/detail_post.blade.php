@@ -292,7 +292,7 @@
         }
 
         .btn-submit-enhanced {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, #f56040, #833ab4);
             border: none;
             color: white;
             padding: 12px 30px;
