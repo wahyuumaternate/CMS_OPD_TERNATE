@@ -52,7 +52,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="post-meta mb-2">
-                                    <span class="badge bg-primary">{{ __('frontend/home.latest.badge') }}</span>
+                                    <span class="badge bg-primary">{{ $post->category->name }}</span>
                                     <small class="text-muted">{{ $post->created_at->format('d M Y') }}</small>
                                 </div>
                                 <h5 class="card-title">

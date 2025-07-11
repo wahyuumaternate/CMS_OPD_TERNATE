@@ -106,7 +106,7 @@
                                 <img src="{{ $post->image }}" alt="{{ $post->title }}" class="img-fluid" />
                             </div>
 
-                            <p class="post-category">{{ $post->category->name }}
+                            <p class="post-category">{{ $post->category->name  }}
                             </p>
 
                             <h2 class="title">
