@@ -1,0 +1,13 @@
+theme/
+├── layouts/
+│   ├── header.blade.php
+│   ├── hero.blade.php
+│   ├── main.blade.php
+│   └── sidebar.blade.php
+├── detail_galleries.blade.php
+├── detail_post.blade.php
+├── galleries.blade.php
+├── index.blade.php
+├── pages.blade.php
+├── posts_categories.blade.php
+└── search.blade.php

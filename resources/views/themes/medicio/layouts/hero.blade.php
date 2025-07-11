@@ -7,7 +7,7 @@
                 <img src="{{ $post->image }}" alt="{{ $post->title }}">
                 <div class="container">
                     <h2>{{ $post->title }}</h2>
-                    <p>{{ Str::limit($post->excerpt, 150, '...') }}</p>
+                    <p>{!! Str::limit($post->excerpt, 150, '...') !!}</p>
                     <a href="{{ route('posts.show', $post->slug) }}" class="btn-get-started">
                         {{ __('frontend/home.latest.button') }}
                     </a>
