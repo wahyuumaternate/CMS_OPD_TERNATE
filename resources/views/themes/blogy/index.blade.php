@@ -115,8 +115,8 @@
 
                             <div class="d-flex align-items-center">
                                 <div class="post-meta">
-                                    <p class="post-author">Author :
-                                        {{ $post->author ?? __('frontend/home.default.author') }}</p>
+                                    {{-- <p class="post-author">Author :
+                                        {{ $post->author ?? __('frontend/home.default.author') }}</p> --}}
                                     <p class="post-date">
                                         <time datetime="{{ $post->created_at->toDateString() }}">
                                             {{ $post->created_at->translatedFormat('M. jS, Y') }}
