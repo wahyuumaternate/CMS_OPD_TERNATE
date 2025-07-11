@@ -208,6 +208,7 @@ class PostsController extends Controller
             'title' => $request->title,
             'slug' => $slugs,
             'image' => $request->input('image'),
+            'excerpt' => Str::limit(strip_tags($request->input('content')), 150),
             'content' => $request->content,
             'status' => $request->status,
             'category_id' => $request->category_id,
