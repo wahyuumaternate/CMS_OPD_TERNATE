@@ -149,10 +149,137 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Responsive Image Fix for TinyMCE Content */
         .entry-content img {
+            max-width: 100%;
+            height: auto;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             margin: 20px 0;
+            display: block;
+        }
+
+        /* Ensure all content images are responsive */
+        .entry-content figure,
+        .entry-content figure img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .entry-content figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .entry-content figcaption {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+        /* Handle TinyMCE specific image classes */
+        .entry-content .mce-object,
+        .entry-content .mce-preview-object {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive tables from TinyMCE */
+        .entry-content table {
+            width: 100%;
+            max-width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+            overflow-x: auto;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .entry-content table thead,
+        .entry-content table tbody,
+        .entry-content table tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .entry-content table th,
+        .entry-content table td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .entry-content table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        /* Responsive video embeds */
+        .entry-content iframe,
+        .entry-content video,
+        .entry-content embed,
+        .entry-content object {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        /* Responsive iframe container */
+        .entry-content .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .entry-content .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        /* Content Enhancement */
+        .entry-content h1,
+        .entry-content h2,
+        .entry-content h3,
+        .entry-content h4,
+        .entry-content h5,
+        .entry-content h6 {
+            color: #667eea;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .entry-content blockquote {
+            border-left: 4px solid #667eea;
+            background: #f8f9ff;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+
+        .entry-content a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .entry-content a:hover {
+            text-decoration: underline;
         }
 
         .entry-footer {
@@ -349,6 +476,11 @@
             .social-icons-enhanced {
                 justify-content: center;
             }
+
+            /* Mobile responsive tables */
+            .entry-content table {
+                font-size: 12px;
+            }
         }
 
         @keyframes pulse {
@@ -433,7 +565,12 @@
                             <h2 class="entry-title">{{ $page->title }}</h2>
 
                             <!-- Excerpt if available -->
-
+                            {{-- @if ($page->excerpt)
+                                <div class="entry-excerpt"
+                                    style="padding: 0 30px; font-size: 1.2rem; color: #666; font-style: italic; margin-bottom: 20px; padding: 15px 30px; background: #f8f9ff; border-radius: 8px; border-left: 4px solid #667eea;">
+                                    {{ $page->excerpt }}
+                                </div>
+                            @endif --}}
 
                             <div class="entry-content">
                                 {!! $page->content !!}
@@ -450,22 +587,22 @@
                                         <a href="https://www.facebook.com/sharer/sharer.php?u={{ route('posts.show', $page->slug) }}"
                                             target="_blank" class="social-icon facebook" aria-label="Share on Facebook"
                                             title="Share on Facebook">
-                                            <img src="{{ asset('assets/facebook.svg') }}" alt="" width="40">
+                                            <i class="fab fa-facebook-f"></i>
                                         </a>
                                         <a href="https://twitter.com/intent/tweet?url={{ route('posts.show', $page->slug) }}&text={{ urlencode($page->title) }}"
                                             target="_blank" class="social-icon twitter" aria-label="Share on Twitter"
                                             title="Share on Twitter">
-                                            <img src="{{ asset('assets/x.svg') }}" alt="" width="40">
+                                            <i class="fab fa-twitter"></i>
                                         </a>
                                         <a href="https://api.whatsapp.com/send?text={{ urlencode($page->title . ' - ' . route('posts.show', $page->slug)) }}"
                                             target="_blank" class="social-icon whatsapp" aria-label="Share on WhatsApp"
                                             title="Share on WhatsApp">
-                                            <img src="{{ asset('assets/whatsapp.svg') }}" alt="" width="30">
+                                            <i class="fab fa-whatsapp"></i>
                                         </a>
-                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ route('posts.show', $page->slug) }}"
-                                            target="_blank" class="social-icon instagram" aria-label="Share on LinkedIn"
-                                            title="Share on LinkedIn">
-                                            <img src="{{ asset('assets/instagram.svg') }}" alt="" width="30">
+                                        <a href="https://t.me/share/url?url={{ urlencode(request()->url()) }}&text={{ urlencode($page->title) }}"
+                                            target="_blank" class="social-icon instagram" aria-label="Share on Telegram"
+                                            title="Share on Telegram">
+                                            <i class="fab fa-linkedin-in"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -529,21 +666,27 @@
                                                 <input name="name" type="text" class="form-control"
                                                     placeholder="{{ __('frontend/post.your_name') }}"
                                                     value="{{ old('name') }}" required>
-
+                                                @error('name')
+                                                    <small class="text-danger">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                             <div class="col-md-6 form-group mb-3">
                                                 <label class="form-label">{{ __('frontend/post.your_email') }}</label>
                                                 <input name="email" type="email" class="form-control"
                                                     placeholder="{{ __('frontend/post.your_email') }}"
                                                     value="{{ old('email') }}" required>
-
+                                                @error('email')
+                                                    <small class="text-danger">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="form-group mb-3">
                                             <label class="form-label">{{ __('frontend/post.your_comment') }}</label>
                                             <textarea name="content" class="form-control" rows="4" placeholder="{{ __('frontend/post.your_comment') }}"
                                                 required>{{ old('content') }}</textarea>
-
+                                            @error('content')
+                                                <small class="text-danger">{{ $message }}</small>
+                                            @enderror
                                         </div>
                                         <div class="form-group mb-3">
                                             {!! ReCaptcha::htmlScriptTagJsApi() !!}

@@ -50,6 +50,8 @@
     <meta http-equiv="Expires" content="0">
 
     @stack('styles')
+    @stack('head')
+
     {{-- <!-- Apple Touch Icons -->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ asset('favicon/apple-touch-icon-57x57.png') }}" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114"
