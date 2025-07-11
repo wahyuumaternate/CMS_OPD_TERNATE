@@ -99,14 +99,14 @@
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="row gy-4">
-                @foreach ($posts->skip(1) as $post)
+                @forelse ($posts->take(8) as $post)
                     <div class="col-lg-4">
                         <article>
                             <div class="post-img">
                                 <img src="{{ $post->image }}" alt="{{ $post->title }}" class="img-fluid" />
                             </div>
 
-                            <p class="post-category">{{ $post->category->name ?? __('frontend/home.default.category') }}
+                            <p class="post-category">{{ $post->category->name }}
                             </p>
 
                             <h2 class="title">
