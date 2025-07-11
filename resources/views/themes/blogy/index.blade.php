@@ -72,8 +72,8 @@
 
                             <div class="d-flex align-items-center">
                                 <div class="post-meta">
-                                    <p class="post-author">Author :
-                                        {{ $utama->author ?? __('frontend/home.default.author') }}</p>
+                                    {{-- <p class="post-author">Author :
+                                        {{ $utama->author ?? __('frontend/home.default.author') }}</p> --}}
                                     <p class="post-date">
                                         <time datetime="{{ $utama->created_at->toDateString() }}">
                                             {{ $utama->created_at->translatedFormat('M. jS, Y') }}
