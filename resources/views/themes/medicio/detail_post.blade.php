@@ -672,7 +672,7 @@
                                 @if ($page->excerpt)
                                     <div class="article-excerpt"
                                         style="font-size: 1.1rem; color: #666; font-style: italic; margin-bottom: 25px; padding: 15px; background: #f0fbf7; border-radius: 8px; border-left: 4px solid #5db996;">
-                                        {{ $page->excerpt }}
+                                        {!! $page->excerpt !!}
                                     </div>
                                 @endif
 
