@@ -243,10 +243,7 @@
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <h2>{{ $page->title }}</h2>
-                    <ol>
-                        <li><a href="/">{{ __('Home') }}</a></li>
-                        <li>{{ $page->title }}</li>
-                    </ol>
+
                 </div>
             </div>
         </section>
@@ -258,6 +255,7 @@
                     <div class="col-lg-8">
                         <article class="article-content">
                             <img src="{{ $page->image }}" alt="{{ $page->title }}" class="article-image">
+                            <h2>{{ $page->title }}</h2>
                             <div class="content">
                                 {!! $page->content !!}
                             </div>
