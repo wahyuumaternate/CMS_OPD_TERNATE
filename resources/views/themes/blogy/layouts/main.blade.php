@@ -145,10 +145,10 @@
                 <strong class="px-1 sitename">{{ $site_name->value }} {{ date('Y') }}</strong>.
                 {{ __('frontend/footer.copyright') }}
             </p>
-            <div class="credits">
+            {{-- <div class="credits">
                 {{ __('frontend/footer.developed_by') }}
-                <a href="https://kota ternate.ac.id" target="_blank">UPATIK Kota Ternate</a>
-            </div>
+                <a href="https://kota ternate.ac.id" target="_blank"> Kota Ternate</a>
+            </div> --}}
         </div>
 
     </footer>
