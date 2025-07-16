@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="container">
-        <div class="page-inner">
+        {{-- <div class="page-inner">
             <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4">
                 <div>
                     <h3 class="fw-bold mb-1 fs-3">{{ __('settings.title') }}</h3>
@@ -26,7 +26,7 @@
                         </button>
                     </form>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="card">
                 <div class="card-body">

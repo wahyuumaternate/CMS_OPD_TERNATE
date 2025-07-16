@@ -8,15 +8,15 @@ use Illuminate\Support\Facades\Artisan;
 class UpdateController extends Controller
 {
    
-    public function updateApp(Request $request)
-    {
-        // Jalankan command yang sudah kita buat sebelumnya
-        Artisan::call('app:update');
+    // public function updateApp(Request $request)
+    // {
+    //     // Jalankan command yang sudah kita buat sebelumnya
+    //     Artisan::call('app:update');
 
-        // Ambil outputnya
-        // $output = Artisan::output();
-        notify()->success('Update berhasil dijalankan!');
-        // Bisa redirect balik ke halaman admin dengan notifikasi
-        return back()->with('success', 'Update berhasil dijalankan!');
-    }
+    //     // Ambil outputnya
+    //     // $output = Artisan::output();
+    //     notify()->success('Update berhasil dijalankan!');
+    //     // Bisa redirect balik ke halaman admin dengan notifikasi
+    //     return back()->with('success', 'Update berhasil dijalankan!');
+    // }
 }
