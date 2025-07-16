@@ -95,8 +95,9 @@
 
     <!-- Footer Start -->
     <div class="container-fluid py-4 px-sm-3 px-md-5 mt-3 mt-md-5" style="background: #111111;">
-        <p class="m-0 text-center">&copy; <a href="{{ url('/') }}">{{ $site_name->value }}
-                {{ date('Y') }}</a>. All Rights Reserved.
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Diskomsandi Kota Ternate
+                {{ date('Y') }}</strong> <span>All
+                Rights Reserved</span>
         </p>
     </div>
     <!-- Footer End -->

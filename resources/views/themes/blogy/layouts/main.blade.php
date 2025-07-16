@@ -140,15 +140,10 @@
     <footer id="footer" class="footer">
 
         <div class="container copyright text-center mt-4">
-            <p>
-                © {{ date('Y') }}
-                <strong class="px-1 sitename">{{ $site_name->value }} {{ date('Y') }}</strong>.
-                {{ __('frontend/footer.copyright') }}
+           <p>© <span>Copyright</span> <strong class="px-1 sitename">Diskomsandi Kota Ternate
+                    {{ date('Y') }}</strong> <span>All
+                    Rights Reserved</span>
             </p>
-            {{-- <div class="credits">
-                {{ __('frontend/footer.developed_by') }}
-                <a href="https://kota ternate.ac.id" target="_blank"> Kota Ternate</a>
-            </div> --}}
         </div>
 
     </footer>
