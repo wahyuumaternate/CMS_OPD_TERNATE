@@ -1,3 +1,8 @@
+<div id="top-banner" class="w-100 text-center">
+    <a href="/" target="_blank">
+        <img src="{{ asset('assets/banner.jpg') }}" alt="Banner Promosi" class="img-fluid w-100">
+    </a>
+</div>
 <header id="header" class="header position-relative">
     <div class="container-fluid container-xl position-relative">
         <div class="top-row d-flex align-items-center justify-content-between">

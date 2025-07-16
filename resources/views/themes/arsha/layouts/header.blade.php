@@ -1,3 +1,4 @@
+
 <header class="header d-flex align-items-center {{ request()->is('/') ? 'fixed-top' : 'sticky-top' }}">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
